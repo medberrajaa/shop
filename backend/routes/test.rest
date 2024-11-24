@@ -1,9 +1,3 @@
-POST  https://shop-097q.onrender.com/products
+GET https://shop-097q.onrender.com/products
 Content-Type: application/json
 
-{
-    "name":"NEW PRODUCT",
-    "price":100,
-    "description":"new product to test",
-    "stock":1
-}
