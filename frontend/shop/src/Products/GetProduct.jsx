@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+require("dotenv").config()
 export const GetProduct = () => {
     const [product,setProduct] = useState([]);
     const {id} = useParams();
     useEffect(()=>{
-        axios.get('http://localhost:8081/products/'+id).then(function(response){
+        axios.get(process.env.PRODUCTSROUTE +"/"+ id).then(function(response){
             setProduct(response.data);            
         });
     },[])

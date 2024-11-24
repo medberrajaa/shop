@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+require("dotenv").config()
 
 export default function ListProducts () {
     const navigate = useNavigate();
@@ -8,7 +9,7 @@ export default function ListProducts () {
 
     const [products,setProducts] = useState([]);
     async function getProducts(){
-        await axios.get("http://localhost:8081/products").then(function(response){
+        await axios.get(process.env.PRODUCTSROUTE).then(function(response){
             setProducts(response.data);
         })
     }
