@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const productsRouter = require('./routes/productRouter');
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 const mdb = mongoose.connection;
 const { logger } = require('./middleware/logEvents');
 
