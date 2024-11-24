@@ -24,6 +24,6 @@ app.get('^/$|/index(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
 });
 
-app.listen(80,()=>{
+app.listen(PORT,()=>{
     console.log("listen");
 });
