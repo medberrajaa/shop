@@ -1,2 +1,9 @@
-GET  http://localhost:8081/products/
+POST  http://localhost:8081/products/
 Content-Type: application/json
+
+{
+    "name":"NEW PRODUCT",
+    "price":100,
+    "description":"new product to test",
+    "stock":1
+}
