@@ -1,17 +1,19 @@
 require("dotenv").config()
 
 const express = require('express');
-const cors = require('cors');
 const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const corsOption = require('./config/corsOptions')
+const cors = require("cors")
 const productsRouter = require('./routes/productRouter');
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = 4000;
 const mdb = mongoose.connection;
 const { logger } = require('./middleware/logEvents');
 
-app.use(logger);
+//app.use(logger);
+app.use(cors({origin:["http://localhost:3000"]}))
 app.use(bodyParser.json());
 app.use('/',express.static(path.join(__dirname,'/public')));
 app.use('/products',productsRouter);
