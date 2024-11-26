@@ -6,7 +6,7 @@ export default function Home() {
   let [products, setProducts] = useState([])
   async function getProducts() {
     try {
-      const response = await axios.get(process.env.BACKEND);
+      const response = await axios.get("https://shop-pq9i.onrender.com/products");
       setProducts(response.data);
     } catch (error) {
       console.error("Error fetching products:", error);
