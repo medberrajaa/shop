@@ -24,3 +24,6 @@
 20241126	09:43:31	07603879-df6c-4d41-952c-276f166b0c69	OPTIONS	http://localhost:3000	/products
 20241126	09:44:06	58f503cc-52da-4b04-9151-29b628540721	GET	http://localhost:3000	/products
 20241126	09:44:27	0144a18e-0655-40d3-a406-0c51b74eb11e	GET	http://localhost:3000	/products
+20241126	11:14:57	c6e8b8d0-e038-49e0-937d-c27cb7c3a803	GET	http://localhost:3000	/products
+20241126	11:29:11	d8f8d8a4-5d22-4de8-b52d-2ac2ef5e2ddb	GET	http://localhost:3000	/products
+20241126	11:29:40	60f8328e-bd65-45a4-8b0a-ac3fdbca6470	GET	http://localhost:3000	/products

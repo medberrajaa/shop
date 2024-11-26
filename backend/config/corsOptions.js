@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const whitelist = [
-    "http://localhost:3000/",
+    process.env.FRONT_ADRESS,
 ];
 
 const corsOptions = {

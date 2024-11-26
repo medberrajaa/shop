@@ -12,8 +12,11 @@ const PORT = 4000;
 const mdb = mongoose.connection;
 const { logger } = require('./middleware/logEvents');
 
-//app.use(logger);
-app.use(cors({origin:["http://localhost:3000"]}))
+// app.use(logger);
+app.use(cors({
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], 
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+}))
 app.use(bodyParser.json());
 app.use('/',express.static(path.join(__dirname,'/public')));
 app.use('/products',productsRouter);
