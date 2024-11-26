@@ -1,12 +1,13 @@
 'use client'
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { processEnv } from "@next/env";
 
 export default function Home() {
   let [products, setProducts] = useState([])
   async function getProducts() {
     try {
-      const response = await axios.get("https://shop-pq9i.onrender.com/products");
+      const response = await axios.get(process.env.BACKEND);
       setProducts(response.data);
     } catch (error) {
       console.error("Error fetching products:", error);
