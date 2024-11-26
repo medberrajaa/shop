@@ -1,0 +1,9 @@
+schemaVersion: 1.0 
+
+endpoints:
+- name: "REST API"
+  service:
+     port: 8080
+  type: REST
+  networkVisibilaty: Public
+  context: /
