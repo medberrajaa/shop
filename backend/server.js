@@ -8,7 +8,7 @@ const corsOption = require('./config/corsOptions')
 const cors = require("cors")
 const productsRouter = require('./routes/productRouter');
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const mdb = mongoose.connection;
 const { logger } = require('./middleware/logEvents');
 
